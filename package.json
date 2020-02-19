@@ -1,14 +1,17 @@
 {
   "name": "diamond-clothin-api",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.14.1",
+    "npm": "6.13.4"
+  },
   "description": "A simple API for hadling payments for the Diamon Clothing Co. React app",
   "scripts": {
-    "client": "cd client && yarn start",
+    "client": "cd ../ecommerce-project/ && npm start",
     "server": "nodemon server.js",
     "build": "cd client && npm run build",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
